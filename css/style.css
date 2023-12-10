@@ -123,23 +123,24 @@ body {
 }
 
 .hero .content p {
-    font-size: 1.6rem;
-    margin-top: 1rem;
-    line-height: 1.4;
-    font-weight: 100;
-    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
-    line-height: 1.2;
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 100;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+  mix-blend-mode: difference;
 }
 
 .hero .content .cta {
-    margin-top: 1rem;
-    display: inline-block;
-    padding: 1rem 3rem;
-    font-size: 1.4rem;
-    color: var(--full-white);
-    background-color: var(--primary);
-    border-radius: 0.5rem;
-    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: var(--full-white);
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
 /* body {
     min-height: 2000px;

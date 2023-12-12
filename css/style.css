@@ -456,6 +456,12 @@ body {
   .contact .row form {
     padding-top: 0;
   }
+
+  .navbar .search-form {
+    width: 90%;
+    right: 2rem;
+  }
+
 }
 
 /* Mobile */

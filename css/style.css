@@ -85,6 +85,42 @@ body {
   display: none;
 }
 
+/* End Navbar */
+
+/* Navbar Search Form */
+  .navbar .search-form {
+    position: absolute;
+    top: 100%;
+    right: 7%;
+    background-color: var(--full-white);
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+
+  .navbar .search-form.active {
+    transform: scaleY(1);
+  }
+
+  .navbar .search-form input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--bg);
+    padding: 1rem;
+  }
+
+  .navbar .search-form label {
+    cursor: pointer;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    color: var(--bg);
+  }
+/* End Navbar Search Form */
+
 /* Hero Section */
 .hero {
   min-height: 100vh;
@@ -326,6 +362,9 @@ body {
   }
 
 /* Footer End */
+
+
+
 /* Media Queries */
 
 /* Laptop */
@@ -466,4 +505,5 @@ body {
 
   .menu .row .menu-card {
     width: 100%; /* Set the width to 100% for mobile screens */
+}
 }

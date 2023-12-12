@@ -17,7 +17,23 @@ const searchForm = document.querySelector(".search-form");
 const searchBox = document.querySelector("#search-box");
 const searchButton = document.querySelector("#search-button");
 searchButton.addEventListener("click", function (e) {
-  searchForm.classList.add("active");
-  searchBox.focus();
+  if (searchForm.classList.contains("active")) {
+    // If search form is active, hide it
+    searchForm.classList.remove("active");
+  } else {
+    // If search form is not active, show it
+    searchForm.classList.add("active");
+    searchBox.focus();
+  }
+
   e.preventDefault();
+});
+
+
+// Click Outside sidebar for remove nav
+const hamburger = document.querySelector('#hamburger-menu');
+document.addEventListener('click', function(e) {
+  if (!searchForm.contains(e.target) && !searchButton.contains(e.target)) {
+    searchForm.classList.remove('active');
+  }
 });

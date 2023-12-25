@@ -34,7 +34,9 @@
 
       <div class="navbar-extra">
         <a href="#" id="search-button"> <i data-feather="search"></i></a>
-        <a href="#" id="shopping-cart"> <i data-feather="shopping-cart"></i></a>
+        <a href="#" id="shopping-cart-button">
+          <i data-feather="shopping-cart"></i
+        ></a>
         <a href="#" id="hamburger-menu"> <i data-feather="menu"></i></a>
       </div>
 
@@ -49,6 +51,38 @@
         <label for="search-box"><i data-feather="search"></i></label>
       </div>
       <!-- Search End -->
+
+      <!-- Shopping Cart Start -->
+      <div class="shopping-cart" id="shopping-cart">
+        <div class="cart-item">
+          <img src="img/product/nasi-pecel.png" alt="Product 1" />
+          <div class="item-detail">
+            <h3>Product 1</h3>
+            <div class="item-price">IDR 9K</div>
+          </div>
+
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+        <div class="cart-item">
+          <img src="img/product/nasi-pecel.png" alt="Product 1" />
+          <div class="item-detail">
+            <h3>Product 1</h3>
+            <div class="item-price">IDR 9K</div>
+          </div>
+
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+        <div class="cart-item">
+          <img src="img/product/nasi-pecel.png" alt="Product 1" />
+          <div class="item-detail">
+            <h3>Product 1</h3>
+            <div class="item-price">IDR 9K</div>
+          </div>
+
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+      </div>
+      <!-- Shopping Cart End -->
     </nav>
 
     <!-- Navbar end -->
@@ -149,8 +183,8 @@
       <div class="row">
         <div class="product-card">
           <div class="product-icons">
-            <a href=""><i data-feather="shopping-cart"></i></a>
-            <a href=""><i data-feather="eye"></i></a>
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+            <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
           </div>
 
           <div class="product-image">
@@ -176,34 +210,8 @@
 
         <div class="product-card">
           <div class="product-icons">
-            <a href=""><i data-feather="shopping-cart"></i></a>
-            <a href=""><i data-feather="eye"></i></a>
-          </div>
-
-          <div class="product-image">
-            <img src="img/product/nasi-pecel.png" alt="Product 1" />
-          </div>
-
-          <div class="product-content">
-            <h3>Nasi Pecel</h3>
-            <div class="product-stars">
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star"></i>
-            </div>
-
-            <div class="product-price">
-              IDR 9K
-              <span>IDR 12K</span>
-            </div>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="product-icons">
-            <a href=""><i data-feather="shopping-cart"></i></a>
-            <a href=""><i data-feather="eye"></i></a>
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+            <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
           </div>
 
           <div class="product-image">
@@ -226,11 +234,37 @@
             </div>
           </div>
         </div>
+        <div class="product-card">
+          <div class="product-icons">
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+            <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+          </div>
+
+          <div class="product-image">
+            <img src="img/product/nasi-pecel.png" alt="Product 1" />
+          </div>
+
+          <div class="product-content">
+            <h3>Nasi Pecel</h3>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+
+            <div class="product-price">
+              IDR 9K
+              <span>IDR 12K</span>
+            </div>
+          </div>
+        </div>
 
         <div class="product-card">
           <div class="product-icons">
-            <a href=""><i data-feather="shopping-cart"></i></a>
-            <a href=""><i data-feather="eye"></i></a>
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+            <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
           </div>
 
           <div class="product-image">
@@ -318,6 +352,42 @@
       </div>
     </footer>
     <!-- Footer End -->
+
+    <!-- Modal Box Item Detail Start-->
+    <div class="modal" id="item-detail-modal">
+      <div class="modal-container">
+        <a href="#" class="close-icon" data-feather="x"></a>
+
+        <div class="modal-content">
+          <img src="img/product/nasi-pecel.png" alt="Product-1" />
+          <div class="product-content">
+            <h3>Product 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
+              error sint recusandae et at labore placeat in minima doloremque
+              vitae officiis veniam obcaecati ipsum perspiciatis!
+            </p>
+
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+
+            <div class="product-price">
+              IDR 9K
+              <span>IDR 12K</span>
+            </div>
+            <a href="#"
+              ><i data-feather="shopping-cart"></i><span>Add to Cart</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  Modal Box Item Detail End -->
 
     <!-- Feather Icons -->
     <script>

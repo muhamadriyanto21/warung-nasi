@@ -79,7 +79,7 @@ body {
 }
 
 .navbar .navbar-extra a:hover {
-  color: var(--primary);
+  color: #666;
 }
 
 #hamburger-menu {
@@ -123,6 +123,22 @@ body {
 /* End Navbar Search Form */
 
 /* Shopping Cart */
+
+#shopping-cart-button {
+  position: relative;
+}
+
+.navbar-extra a .quantity-badge {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: -10px;
+  padding: 1px 5px;
+  background-color: red;
+  border-radius: 50%;
+  font-size: 0.8rem;
+}
+
 .shopping-cart {
   position: absolute;
   top: 100%;
@@ -150,8 +166,7 @@ body {
 }
 
 .shopping-cart h3 {
-  font-size: 1.6rem;
-  padding-bottom: 0.5rem;
+  font-size: 1.4rem;
 }
 
 .shopping-cart .item-price {
@@ -169,7 +184,7 @@ body {
 }
 
 .shopping-cart img {
-  height: 6rem;
+  height: 4rem;
   border-radius: 50%;
 }
 
@@ -468,11 +483,11 @@ body {
   font-size: 1.3rem;
   font-weight: bold;
 }
-.products .product-price span {
+/* .products .product-price span {
   text-decoration: line-through;
   font-weight: lighter;
   font-size: 1rem;
-}
+} */
 
 /* End Products Section */
 
@@ -539,7 +554,7 @@ footer .credit a {
 
 /* Modal Animation */
 @keyframes animateModal {
-  from {
+  frnavbarom {
     top: -300px;
     opacity: 0;
   }

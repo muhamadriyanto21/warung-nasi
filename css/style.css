@@ -173,14 +173,16 @@ body {
   font-size: 1.2rem;
 }
 
-.shopping-cart .remove-item {
-  position: absolute;
-  right: 1rem;
+.shopping-cart .cart-item #add,
+.shopping-cart .cart-item #remove {
+  display: inline-block;
+  padding: 2px 5px;
   cursor: pointer;
-}
-
-.shopping-cart .remove-item:hover {
-  color: var(--primary);
+  background-color: #010101;
+  margin: 0 8px;
+  color: var(--full-white);
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 .shopping-cart img {

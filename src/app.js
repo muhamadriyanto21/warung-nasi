@@ -14,26 +14,42 @@ document.addEventListener("alpine:init", () => {
     total: 0,
     quantity: 0,
     add(newItem) {
-      // cek apakah ada barang yang sama dicart
+      console.log("oke");
+      // cek apakah ada barang yang sama di cart
       const cartItem = this.items.find((item) => item.id === newItem.id);
+    
       // jika belum ada / cart masih kosong
-      if (cartItem) {  
-      this.items.push({...newItem, quantity: 1, total: newItem.price});
+      if (!cartItem) {
+        this.items.push({ ...newItem, quantity: 1, total: parseFloat(newItem.price) });
+      } else {
+        // Jika item sudah ada di keranjang, tingkatkan jumlah dan perbarui total
+        cartItem.quantity++;
+        cartItem.total = parseFloat(cartItem.price) * cartItem.quantity;
+      }
+    
+      // Update total dan quantity
       this.quantity++;
-      this.total += newItem.price;
-      console.log(this.total);
-      }else {
-        // jika barang sudah ada, cek apakah barang beda atau sama dengan yang ada di cart
-         this.items = this.items.map((item) => {
-          // jika barang berbeda
-            if(item.id !== newItem.id){
-              return item;
-            }else {
-              // jika barang sudah ada, tambah quantity dan sub totalnya 
-              item.quantity++;
-              item.total = item.price
-            }
-         });
+      this.total = this.items.reduce((sum, item) => sum + parseFloat(item.total), 0);
+    },   
+    remove(id) {
+      // Cari index dari produk yang akan dihapus
+      const index = this.items.findIndex((item) => item.id === id);
+
+      if (index !== -1) {
+        const cartItem = this.items[index];
+
+        if (cartItem.quantity > 1) {
+          // Jika quantity lebih dari 1, kurangi quantity dan update total
+          cartItem.quantity--;
+          cartItem.total -= cartItem.price;
+          this.quantity--;
+          this.total -= cartItem.price;
+        } else {
+          // Jika quantity adalah 1, hapus item dari keranjang
+          this.quantity--;
+          this.total -= cartItem.price;
+          this.items.splice(index, 1);
+        }
       }
     },
   });

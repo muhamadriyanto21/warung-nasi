@@ -161,7 +161,7 @@ body {
   align-items: center;
   gap: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   position: relative;
 }
 
@@ -188,6 +188,12 @@ body {
 .shopping-cart img {
   height: 4rem;
   border-radius: 50%;
+}
+
+.shopping-cart h4 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-top: -1.5rem;
 }
 
 /* Hero Section */
